@@ -1,0 +1,16 @@
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.js-disable-hover,
+.js-disable-hover * {
+  pointer-events: none !important;
+}

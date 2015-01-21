@@ -1,0 +1,9 @@
+input[type='text'] {
+}
+
+input[type='submit'] {
+  @extend %button;
+}
+
+input::placeholder {
+}

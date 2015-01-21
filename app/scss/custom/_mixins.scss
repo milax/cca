@@ -1,0 +1,23 @@
+// Postioning
+@mixin position($coordinates: 0, $position: absolute) {
+  $length: length($coordinates);
+ 
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 1);
+  $bottom: nth($coordinates, 1);
+  $left: nth($coordinates, 1);
+ 
+  @if $length > 1 {
+    $right: nth($coordinates, 2);
+    $left: nth($coordinates, 2);
+  }
+  @if $length > 2 { $bottom: nth($coordinates, 3); }
+  @if $length > 3 { $left: nth($coordinates, 4); }
+ 
+  position: $position;
+ 
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
