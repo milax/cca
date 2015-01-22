@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         tasks: ['install:bower', 'bower:require']
       },
       sass: {
-        files: ['<%= yeoman.app %>/<%= yeoman.scssDir %>/**/*.scss'],
+        files: ['src/scss/**/*.scss'],
         tasks: ['sass:dist','autoprefixer']
       },
       livereload: {
@@ -41,10 +41,10 @@ module.exports = function (grunt) {
           livereload: true
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
-          '<%= yeoman.app %>/<%= yeoman.cssDir %>/{,*/}*.css',
-          '<%= yeoman.app %>/<%= yeoman.jsDir %>/**/*.js',
-          '<%= yeoman.app %>/<%= yeoman.imagesDir %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          'src/{,*/}*.html',
+          'src/styles/*.css',
+          'src/scripts/*.js',
+          'src/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -56,12 +56,12 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         hostname: '127.0.0.1',
-        livereload: false,
+        livereload: true,
         keepalive: false
       },
       server: {
         options: {
-          open: 'http://127.0.0.1:9000/index.html'
+          open: 'http://127.0.0.1:9000/src/index.html'
         }
       }
     },
