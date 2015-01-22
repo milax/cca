@@ -6,12 +6,11 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   var yeoman = {
-    app:      'app',
-    dist:     'dist',
+    app:      'src',
+    dist:     '',
 
     htmlDir:  'html',
-    jadeDir:  'jade',
-    
+
     scssDir:  'scss',
     cssDir:   'styles',
 
@@ -62,20 +61,8 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          open: 'http://127.0.0.1:9000/app/index.html'
+          open: 'http://127.0.0.1:9000/index.html'
         }
-      }
-    },
-
-    /*
-    * usemin section
-    */
-    filerev: {
-      source: {
-        src: [
-          '<%= yeoman.dist %>/<%= yeoman.jsDir %>/*.js',
-          '<%= yeoman.dist %>/<%= yeoman.cssDir %>/*.css'
-        ]
       }
     },
 
@@ -83,8 +70,8 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: ['.']
       },
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/<%= yeoman.cssDir %>/{,*/}*.css']
+      html: ['*.html'],
+      css: ['<%= yeoman.cssDir %>/{,*/}*.css']
     },
 
     /*
@@ -97,7 +84,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: '<%= yeoman.app %>/<%= yeoman.imagesDir %>',
             src: '**/*.{png,jpg,jpeg,gif,svg}',
-            dest: '<%= yeoman.dist %>/<%= yeoman.imagesDir %>'
+            dest: '<%= yeoman.imagesDir %>'
           }
         ]
       }
@@ -111,7 +98,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.app %>/images/',
         src: '**',
-        dest: '<%= yeoman.dist %>/images/'
+        dest: 'images/'
       }
     },
 
@@ -123,7 +110,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.app %>/',
         src: '*.html',
-        dest: '<%= yeoman.dist %>/',
+        dest: '',
         ext: '.html'
       }
     },
@@ -138,7 +125,10 @@ module.exports = function (grunt) {
       },
       dist: {
         src: [
-          '<%= yeoman.dist %>'
+          '*.html',
+          'scripts/**/*.*',
+          'styles/**/*.*',
+          'images/**/*.*'
         ]
       }
     },
@@ -149,7 +139,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/<%= yeoman.cssDir %>/main.min.css': '<%= yeoman.app %>/<%= yeoman.cssDir %>/main.css'
+          '<%= yeoman.cssDir %>/main.min.css': '<%= yeoman.app %>/<%= yeoman.cssDir %>/main.css'
         }
       }
     },
@@ -168,7 +158,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           sourceMap: true,
-          includePaths: ['bower_components/foundation/scss']
+          includePaths: ['bower_components/normalize-scss']
         },
         files: {
           '<%= yeoman.app %>/<%= yeoman.cssDir %>/main.css': '<%= yeoman.app %>/<%= yeoman.scssDir %>/main.scss'
@@ -218,11 +208,10 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/scripts/main.min.js': ['app/scripts/main.js']
+          'scripts/main.min.js': ['<%= yeoman.app %>/scripts/main.js']
         }
       }
     },
-
 
     /*
     * Change pathes from `app` to `dist` in img src attribute and css url property
@@ -232,8 +221,8 @@ module.exports = function (grunt) {
         options: {
           patterns: [
             {
-              match: /src=\"\/app\/images\//g,
-              replacement: 'src="/dist/images/'
+              match: /src=\"\/src\/images\//g,
+              replacement: 'src="/images/'
             }
           ]
         },
@@ -241,9 +230,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: '<%= yeoman.dist %>/<%= yeoman.htmlDir %>',
-            src: '{,*/}*.html',
-            dest: '<%= yeoman.dist %>/<%= yeoman.htmlDir %>'
+            cwd: '',
+            src: '*.html',
+            dest: ''
           }
         ]
       },
@@ -251,16 +240,16 @@ module.exports = function (grunt) {
         options: {
           patterns: [
             {
-              match: /url\(\/app/g,
-              replacement: 'url(/dist'
+              match: /url\(\/src/g,
+              replacement: 'url(/'
             },
             {
               match: /url\(\'\/app/g,
-              replacement: 'url(\'/dist'
+              replacement: 'url(\'/'
             },
             {
               match: /url\(\"\/app/g,
-              replacement: 'url(\"/dist'
+              replacement: 'url(\"/'
             }
           ]
         },
@@ -268,9 +257,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: '<%= yeoman.dist %>/<%= yeoman.cssDir %>',
+            cwd: '<%= yeoman.cssDir %>',
             src: '{,*/}*.css',
-            dest: '<%= yeoman.dist %>/<%= yeoman.cssDir %>'
+            dest: '<%= yeoman.cssDir %>'
           }
         ]
       }

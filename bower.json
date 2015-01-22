@@ -15,8 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "~5.4.7",
     "jquery": "~2.1.1",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "normalize-scss": "~3.0.2"
   }
 }
