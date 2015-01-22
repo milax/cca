@@ -373,13 +373,82 @@ table {
 td, th {
   padding: 0; }
 
-/* line 14, D:/_projects/cca/src/src/scss/custom/helpers */
+/* line 14, D:/_projects/cca/src/src/scss/base/helpers */
 .js-disable-hover, .js-disable-hover * {
   pointer-events: none !important; }
 
-/* line 2, D:/_projects/cca/src/src/scss/custom/buttons */
+/* line 2, D:/_projects/cca/src/src/scss/base/buttons */
 button:focus {
   outline: none; }
-/* line 6, D:/_projects/cca/src/src/scss/custom/buttons */
+/* line 6, D:/_projects/cca/src/src/scss/base/buttons */
 button:disabled {
   opacity: 0.3; }
+
+/* line 2, D:/_projects/cca/src/src/scss/layout/grid */
+* {
+  box-sizing: border-box; }
+
+/* line 5, D:/_projects/cca/src/src/scss/layout/grid */
+html {
+  -ms-touch-action: none; }
+
+/* line 9, D:/_projects/cca/src/src/scss/layout/grid */
+html, body {
+  height: 100%; }
+
+/* line 13, D:/_projects/cca/src/src/scss/layout/grid */
+body {
+  line-height: 1.57; }
+
+/* line 4, D:/_projects/cca/src/src/scss/layout/header */
+.site-header {
+  position: relative;
+  background: #ed7971;
+  height: 98.5px; }
+  @media only screen and (min-width: 641px) {
+    .site-header {
+      height: 197px; } }
+
+/* line 2, D:/_projects/cca/src/src/scss/layout/footer */
+.site-footer {
+  background: red; }
+  @media only screen and (min-width: 641px) {
+    .site-footer {
+      background: blue; } }
+
+/* line 5, D:/_projects/cca/src/src/scss/components/logo */
+.logo {
+  position: absolute;
+  top: 50%;
+  
+  left: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  
+      -ms-transform: translate(-50%, -50%);
+  
+          transform: translate(-50%, -50%);
+  text-indent: -9999em;
+  overflow: hidden;
+  background: url(../images/logo.png) 50% 50% no-repeat;
+  background-size: 75px 64.5px;
+  width: 150px;
+  height: 129px;
+  display: inline-block; }
+  @media only screen and (min-width: 641px) {
+    .logo {
+      background-size: 150px 129px;
+      width: 150px;
+      height: 129px; } }
+
+/* line 3, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article--title {
+  font-size: 42px; }
+
+/* line 7, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article--sub-title {
+  font-size: 25px; }
+
+/* line 11, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article--header {
+  text-align: center; }

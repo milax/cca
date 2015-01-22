@@ -1,3 +1,7 @@
 
 .site-footer {
+    background: red;
+    @include respond-to(desktop) {
+        background: blue;
+    }
 }

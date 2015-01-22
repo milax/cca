@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         tasks: ['install:bower', 'bower:require']
       },
       sass: {
-        files: ['src/scss/**/*.scss'],
+        files: ['src/scss/{,*/}*.scss'],
         tasks: ['sass:dist','autoprefixer']
       },
       livereload: {

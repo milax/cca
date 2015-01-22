@@ -1,12 +1,19 @@
 @import "normalize";
 
-@import "custom/vars";
-@import "custom/colors";
-@import "custom/typo";
-@import "custom/icons";
+@import "base/vars";
+@import "base/colors";
+@import "base/typo";
+@import "base/icons";
 
-@import "custom/mixins";
-@import "custom/helpers";
-@import "custom/elements";
-@import "custom/form";
-@import "custom/buttons";
+@import "base/mixins";
+@import "base/helpers";
+@import "base/elements";
+@import "base/form";
+@import "base/buttons";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/logo";
+@import "components/main-article";

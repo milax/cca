@@ -1,4 +1,11 @@
 
-.site-header {
+$header-height: 197px;
 
+.site-header {
+  position: relative;
+  background: #ed7971;
+  height: $header-height/2;
+  @include respond-to(desktop) {
+    height: $header-height;
+  }
 }
