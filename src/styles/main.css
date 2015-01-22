@@ -383,7 +383,3 @@ button:focus {
 /* line 6, D:/_projects/cca/src/src/scss/custom/buttons */
 button:disabled {
   opacity: 0.3; }
-
-/* line 14, D:/_projects/cca/src/src/scss/main.scss */
-body {
-  background: red !important; }
