@@ -1,13 +1,26 @@
 
+.main-article {
+  font-size: 17px;
+  margin-bottom: 30px;
+  @extend %indented-box;
 
-.main-article--title {
-  font-size: 42px;
-}
-
-.main-article--sub-title {
-  font-size: 25px;
+  .button-holder {
+    padding: 30px 0 50px;
+  }
 }
 
 .main-article--header {
   text-align: center;
+  font-family: 'Source Sans Pro';
 }
+
+.main-article--title {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.main-article--sub-title {
+  font-size: 25px;
+  font-weight: 300;
+}
+

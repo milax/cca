@@ -1,0 +1,25 @@
+
+.site--section-title {
+  text-align: center;
+  @extend %indented-box;
+}
+
+.site--section {
+  margin-bottom: 20px;
+  p {
+    @extend %indented-box;
+  }
+}
+
+.site--media {
+  margin-bottom: 55px;
+  display: none;
+
+  &:nth-of-type(1) {
+    display: block;
+  }
+}
+
+.site--video {
+  @extend %indented-box;
+}

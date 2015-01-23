@@ -1,34 +1,28 @@
-//$h1-font-size:          rem-calc(50);
-//$h2-font-size:          rem-calc(40);
-//$h3-font-size:          rem-calc(20);
-
-// $font-size-base:       rem-calc(18);
-// $font-size-xsmall:     rem-calc(14);
-// $font-size-small:      rem-calc(20);
-// $font-size-medium:     rem-calc(30);
-// $font-size-large:      rem-calc(40);
-// $font-size-xlarge:     rem-calc(60);
-// $font-size-xxlarge:    rem-calc(70);
-
-
 
 body {
+  font: normal 17px/1.57 Arial;
 }
-
 
 // Headlines
 h1 {
+  font: 700 30px/1 'Source Sans Pro';
+  margin: 0 0 15px;
 }
 
 h2 {
+  font: 300 25px/1 'Source Sans Pro';
+  margin: 0 0 15px;
 }
 
 h3 {
 }
 
+p {
+  margin: 0 0 20px;
+}
+
 // link color
 a {
-
   .no-touch &:hover,
   .no-touch &:focus {
   }

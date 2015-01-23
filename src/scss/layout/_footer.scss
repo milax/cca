@@ -1,7 +1,5 @@
 
 .site-footer {
-    background: red;
-    @include respond-to(desktop) {
-        background: blue;
-    }
+  text-align: center;
+  padding-bottom: 85px;
 }

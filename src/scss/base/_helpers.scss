@@ -10,6 +10,10 @@
   transform: translateY(-50%);
 }
 
+%indented-box {
+  padding: 0 10px;
+}
+
 .js-disable-hover,
 .js-disable-hover * {
   pointer-events: none !important;

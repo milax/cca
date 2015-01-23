@@ -11,5 +11,11 @@ body {
 }
 
 body {
-  line-height: 1.57;
+  background: #e7e5de;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  display: block;
 }

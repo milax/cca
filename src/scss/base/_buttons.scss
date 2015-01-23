@@ -1,20 +1,55 @@
-button {
-  &:focus {
-    outline: none;
-  }
+$go-button-width: 22px;
+$go-button-height: 13px;
+$go-button-padding: 10px;
 
-  &:disabled {
-    opacity: 0.3;
+.button {
+  font: 700 19px/43px 'Source Sans Pro';
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 225px;
+  background: #ed7971;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.button-holder {
+  text-align: center;
+}
+
+%go {
+  width: $go-button-width + $go-button-padding;
+  height: $go-button-height + $go-button-padding;
+  display: block;
+  margin: 0 auto;
+}
+.go-next {
+  background: url(../images/btn/arrow-down.png) 50% 50% no-repeat;
+  margin-bottom: 35px;
+  @include hide-text();
+  @extend %go;
+  @include retina() {
+    background-image: url(../images/btn/arrow-down@2x.png);
+    width: $go-button-width*2 + $go-button-padding;
   }
 }
 
-
-%button-reset {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-}
-
-
-%button {
+.go-top {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  font: 400 20px/1 'Source Sans Pro';
+  text-decoration: none;
+  color: #252525;
+  &:before {
+    content: '';
+    background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
+    padding-bottom: 20px;
+    @extend %go;
+  }
+  @include retina() {
+    background-image: url(../images/btn/arrow-up@2x.png);
+    width: $go-button-width*2 + $go-button-padding;
+  }
 }

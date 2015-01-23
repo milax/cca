@@ -373,16 +373,83 @@ table {
 td, th {
   padding: 0; }
 
-/* line 14, D:/_projects/cca/src/src/scss/base/helpers */
+/* line 2, D:/_projects/cca/src/src/scss/base/typo */
+body {
+  font: normal 17px/1.57 Arial; }
+
+/* line 7, D:/_projects/cca/src/src/scss/base/typo */
+h1 {
+  font: 700 30px/1 'Source Sans Pro';
+  margin: 0 0 15px; }
+
+/* line 12, D:/_projects/cca/src/src/scss/base/typo */
+h2 {
+  font: 300 25px/1 'Source Sans Pro';
+  margin: 0 0 15px; }
+
+/* line 20, D:/_projects/cca/src/src/scss/base/typo */
+p {
+  margin: 0 0 20px; }
+
+/* line 13, D:/_projects/cca/src/src/scss/base/helpers */
+.main-article, .site--section-title, .site--section p, .site--video {
+  padding: 0 10px; }
+
+/* line 18, D:/_projects/cca/src/src/scss/base/helpers */
 .js-disable-hover, .js-disable-hover * {
   pointer-events: none !important; }
 
-/* line 2, D:/_projects/cca/src/src/scss/base/buttons */
-button:focus {
-  outline: none; }
-/* line 6, D:/_projects/cca/src/src/scss/base/buttons */
-button:disabled {
-  opacity: 0.3; }
+/* line 5, D:/_projects/cca/src/src/scss/base/buttons */
+.button {
+  font: 700 19px/43px 'Source Sans Pro';
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 225px;
+  background: #ed7971;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15); }
+
+/* line 17, D:/_projects/cca/src/src/scss/base/buttons */
+.button-holder {
+  text-align: center; }
+
+/* line 21, D:/_projects/cca/src/src/scss/base/buttons */
+.go-next, .go-top:before {
+  width: 32px;
+  height: 23px;
+  display: block;
+  margin: 0 auto; }
+
+/* line 27, D:/_projects/cca/src/src/scss/base/buttons */
+.go-next {
+  background: url(../images/btn/arrow-down.png) 50% 50% no-repeat;
+  margin-bottom: 35px;
+  text-indent: -9999em;
+  overflow: hidden; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .go-next {
+      background-image: url(../images/btn/arrow-down@2x.png);
+      width: 54px; } }
+
+/* line 38, D:/_projects/cca/src/src/scss/base/buttons */
+.go-top {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  font: 400 20px/1 'Source Sans Pro';
+  text-decoration: none;
+  color: #252525; }
+  /* line 45, D:/_projects/cca/src/src/scss/base/buttons */
+  .go-top:before {
+    content: '';
+    background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
+    padding-bottom: 20px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .go-top {
+      background-image: url(../images/btn/arrow-up@2x.png);
+      width: 54px; } }
 
 /* line 2, D:/_projects/cca/src/src/scss/layout/grid */
 * {
@@ -398,7 +465,12 @@ html, body {
 
 /* line 13, D:/_projects/cca/src/src/scss/layout/grid */
 body {
-  line-height: 1.57; }
+  background: #e7e5de; }
+
+/* line 18, D:/_projects/cca/src/src/scss/layout/grid */
+img, iframe {
+  max-width: 100%;
+  display: block; }
 
 /* line 4, D:/_projects/cca/src/src/scss/layout/header */
 .site-header {
@@ -411,10 +483,8 @@ body {
 
 /* line 2, D:/_projects/cca/src/src/scss/layout/footer */
 .site-footer {
-  background: red; }
-  @media only screen and (min-width: 641px) {
-    .site-footer {
-      background: blue; } }
+  text-align: center;
+  padding-bottom: 85px; }
 
 /* line 5, D:/_projects/cca/src/src/scss/components/logo */
 .logo {
@@ -441,14 +511,52 @@ body {
       width: 150px;
       height: 129px; } }
 
-/* line 3, D:/_projects/cca/src/src/scss/components/main-article */
-.main-article--title {
-  font-size: 42px; }
+/* line 2, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article {
+  font-size: 17px;
+  margin-bottom: 30px; }
+  /* line 7, D:/_projects/cca/src/src/scss/components/main-article */
+  .main-article .button-holder {
+    padding: 30px 0 50px; }
 
-/* line 7, D:/_projects/cca/src/src/scss/components/main-article */
-.main-article--sub-title {
-  font-size: 25px; }
-
-/* line 11, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 12, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--header {
+  text-align: center;
+  font-family: 'Source Sans Pro'; }
+
+/* line 17, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article--title {
+  font-size: 42px;
+  font-weight: 700; }
+
+/* line 22, D:/_projects/cca/src/src/scss/components/main-article */
+.main-article--sub-title {
+  font-size: 25px;
+  font-weight: 300; }
+
+/* line 2, D:/_projects/cca/src/src/scss/components/site */
+.site--section-title {
   text-align: center; }
+
+/* line 7, D:/_projects/cca/src/src/scss/components/site */
+.site--section {
+  margin-bottom: 20px; }
+
+/* line 14, D:/_projects/cca/src/src/scss/components/site */
+.site--media {
+  margin-bottom: 55px;
+  display: none; }
+  /* line 18, D:/_projects/cca/src/src/scss/components/site */
+  .site--media:nth-of-type(1) {
+    display: block; }
+
+/* line 2, D:/_projects/cca/src/src/scss/components/highlights */
+.highlights--img {
+  display: none; }
+
+/* line 6, D:/_projects/cca/src/src/scss/components/highlights */
+.highlights--item {
+  text-align: center; }
+  /* line 8, D:/_projects/cca/src/src/scss/components/highlights */
+  .highlights--item .button {
+    margin-bottom: 11px; }
