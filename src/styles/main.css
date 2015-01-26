@@ -567,8 +567,9 @@ img, iframe {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
-  margin: 0 10px; }
-  /* line 31, D:/_projects/cca/src/src/scss/components/site */
+  margin-left: 10px;
+  margin-right: 10px; }
+  /* line 32, D:/_projects/cca/src/src/scss/components/site */
   .site--video iframe {
     position: absolute;
     top: 0;
