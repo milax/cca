@@ -9,8 +9,8 @@ $logo-height: 129px;
 
   background: url(../images/logo.png) 50% 50% no-repeat;
   background-size: $logo-width/2 $logo-height/2;
-  width: $logo-width;
-  height: $logo-height;
+  width: $logo-width/2;
+  height: $logo-height/2;
   display: inline-block;
   @include respond-to(desktop) {
     background-size: $logo-width $logo-height;

@@ -29,6 +29,9 @@ $go-button-padding: 10px;
   margin-bottom: 35px;
   @include hide-text();
   @extend %go;
+  h1 + & {
+    margin-top: -25px;
+  }
   @include retina() {
     background-image: url(../images/btn/arrow-down@2x.png);
     width: $go-button-width*2 + $go-button-padding;
@@ -45,7 +48,7 @@ $go-button-padding: 10px;
   &:before {
     content: '';
     background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     @extend %go;
   }
   @include retina() {
