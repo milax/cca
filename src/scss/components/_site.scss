@@ -2,13 +2,13 @@
 .site--section-title {
   text-align: center;
   margin-bottom: 35px;
-  @extend %indented-box;
+  @include indented-box();
 }
 
 .site--section {
   margin-bottom: 20px;
   p {
-    @extend %indented-box;
+    @include indented-box();
   }
 }
 
@@ -22,7 +22,7 @@
 }
 
 .site--video {
-  @extend %indented-box;
+  @include indented-box();
   height: 0;
   position: relative;
   padding-bottom: 56.25%;

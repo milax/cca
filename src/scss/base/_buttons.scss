@@ -12,6 +12,11 @@ $go-button-padding: 10px;
   color: #fff;
   text-decoration: none;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  @include respond-to(desktop) {
+    font-size: 30px;
+    line-height: 65px;
+    min-width: 345px;
+  }
 }
 
 .button-holder {

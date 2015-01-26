@@ -391,11 +391,7 @@ h2 {
 p {
   margin: 0 0 25px; }
 
-/* line 13, D:/_projects/cca/src/src/scss/base/helpers */
-.main-article, .site--section-title, .site--section p, .site--video {
-  padding: 0 10px; }
-
-/* line 18, D:/_projects/cca/src/src/scss/base/helpers */
+/* line 14, D:/_projects/cca/src/src/scss/base/helpers */
 .js-disable-hover, .js-disable-hover * {
   pointer-events: none !important; }
 
@@ -410,25 +406,30 @@ p {
   color: #fff;
   text-decoration: none;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15); }
+  @media only screen and (min-width: 641px) {
+    .button {
+      font-size: 30px;
+      line-height: 65px;
+      min-width: 345px; } }
 
-/* line 17, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 22, D:/_projects/cca/src/src/scss/base/buttons */
 .button-holder {
   text-align: center; }
 
-/* line 21, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 26, D:/_projects/cca/src/src/scss/base/buttons */
 .go-next, .go-top:before {
   width: 32px;
   height: 23px;
   display: block;
   margin: 0 auto; }
 
-/* line 27, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 32, D:/_projects/cca/src/src/scss/base/buttons */
 .go-next {
   background: url(../images/btn/arrow-down.png) 50% 50% no-repeat;
   margin-bottom: 35px;
   text-indent: -9999em;
   overflow: hidden; }
-  /* line 32, D:/_projects/cca/src/src/scss/base/buttons */
+  /* line 37, D:/_projects/cca/src/src/scss/base/buttons */
   h1 + .go-next {
     margin-top: -25px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -436,7 +437,7 @@ p {
       background-image: url(../images/btn/arrow-down@2x.png);
       width: 54px; } }
 
-/* line 41, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 46, D:/_projects/cca/src/src/scss/base/buttons */
 .go-top {
   display: inline-block;
   margin: 0 auto;
@@ -444,7 +445,7 @@ p {
   font: 400 20px/1 'Source Sans Pro';
   text-decoration: none;
   color: #252525; }
-  /* line 48, D:/_projects/cca/src/src/scss/base/buttons */
+  /* line 53, D:/_projects/cca/src/src/scss/base/buttons */
   .go-top:before {
     content: '';
     background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
@@ -518,40 +519,73 @@ img, iframe {
 .main-article {
   font-size: 17px;
   padding-top: 50px;
-  margin-bottom: 30px; }
-  /* line 8, D:/_projects/cca/src/src/scss/components/main-article */
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media only screen and (min-width: 641px) {
+    .main-article {
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width: 641px) {
+    .main-article {
+      font-size: 20px;
+      max-width: 1025px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 125px; } }
+  /* line 16, D:/_projects/cca/src/src/scss/components/main-article */
   .main-article .button-holder {
     padding: 30px 0 55px; }
 
-/* line 13, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 21, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--header {
   text-align: center;
   font-family: 'Source Sans Pro';
   margin-bottom: 40px; }
 
-/* line 19, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 27, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--title {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 5px; }
+  @media only screen and (min-width: 641px) {
+    .main-article--title {
+      font-size: 85px; } }
 
-/* line 25, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 36, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--sub-title {
   font-size: 25px;
   font-weight: 300; }
+  @media only screen and (min-width: 641px) {
+    .main-article--sub-title {
+      font-size: 50px; } }
 
-/* line 30, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 44, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--img-holder {
   margin-bottom: 70px; }
 
 /* line 2, D:/_projects/cca/src/src/scss/components/site */
 .site--section-title {
   text-align: center;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media only screen and (min-width: 641px) {
+    .site--section-title {
+      padding-left: 0;
+      padding-right: 0; } }
 
 /* line 8, D:/_projects/cca/src/src/scss/components/site */
 .site--section {
   margin-bottom: 20px; }
+  /* line 10, D:/_projects/cca/src/src/scss/components/site */
+  .site--section p {
+    padding-left: 10px;
+    padding-right: 10px; }
+    @media only screen and (min-width: 641px) {
+      .site--section p {
+        padding-left: 0;
+        padding-right: 0; } }
 
 /* line 15, D:/_projects/cca/src/src/scss/components/site */
 .site--media {
@@ -563,12 +597,18 @@ img, iframe {
 
 /* line 24, D:/_projects/cca/src/src/scss/components/site */
 .site--video {
+  padding-left: 10px;
+  padding-right: 10px;
   height: 0;
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
   margin-left: 10px;
   margin-right: 10px; }
+  @media only screen and (min-width: 641px) {
+    .site--video {
+      padding-left: 0;
+      padding-right: 0; } }
   /* line 32, D:/_projects/cca/src/src/scss/components/site */
   .site--video iframe {
     position: absolute;
