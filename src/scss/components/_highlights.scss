@@ -27,7 +27,7 @@
     float: left;
     &:nth-child(2n+1) {
       clear: right;
-      padding-right: 15px;
+      padding-right: 25px;
       .highlights--img {
         float: left;
         clear: both;
@@ -35,7 +35,7 @@
     }
     &:nth-child(2n) {
       clear: right;
-      padding-left: 15px;
+      padding-left: 25px;
       .highlights--img {
         float: right;
         clear: both;

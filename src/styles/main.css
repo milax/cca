@@ -748,7 +748,7 @@ img, iframe {
       /* line 28, D:/_projects/cca/src/src/scss/components/highlights */
       .highlights--item:nth-child(2n+1) {
         clear: right;
-        padding-right: 15px; }
+        padding-right: 25px; }
         /* line 31, D:/_projects/cca/src/src/scss/components/highlights */
         .highlights--item:nth-child(2n+1) .highlights--img {
           float: left;
@@ -756,7 +756,7 @@ img, iframe {
       /* line 36, D:/_projects/cca/src/src/scss/components/highlights */
       .highlights--item:nth-child(2n) {
         clear: right;
-        padding-left: 15px; }
+        padding-left: 25px; }
         /* line 39, D:/_projects/cca/src/src/scss/components/highlights */
         .highlights--item:nth-child(2n) .highlights--img {
           float: right;
