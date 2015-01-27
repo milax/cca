@@ -8,10 +8,41 @@ $go-button-padding: 10px;
   text-transform: uppercase;
   text-align: center;
   min-width: 225px;
-  background: #ed7971;
   color: #fff;
   text-decoration: none;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  position: relative;
+  background-color: transparent;
+
+  &:before {
+    content: '';
+    @include position(0 0 0 0);
+    z-index: -2;
+
+    background-color: #ed7971;
+  }
+
+
+  &:after {
+    content: '';
+    @include position(null 0 0 0);
+    z-index: -1;
+
+    height: 0;
+
+    background-color: #ed7971;
+    transition: all ease-out 200ms;
+  }
+
+  &:hover:after {
+    height: 100%;
+
+    top: 0;
+
+    background-color: #252525;
+    transition: all ease-in 300ms;
+  }
+
 
   @include respond-to(desktop) {
     min-width: 345px;

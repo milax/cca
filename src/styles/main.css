@@ -417,46 +417,77 @@ p {
   text-transform: uppercase;
   text-align: center;
   min-width: 225px;
-  background: #ed7971;
   color: #fff;
   text-decoration: none;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15); }
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  position: relative;
+  background-color: transparent; }
+  /* line 17, D:/_projects/cca/src/src/scss/base/buttons */
+  .button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background-color: #ed7971; }
+  /* line 26, D:/_projects/cca/src/src/scss/base/buttons */
+  .button:after {
+    content: '';
+    position: absolute;
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 0;
+    background-color: #ed7971;
+    -webkit-transition: all ease-out 200ms;
+            transition: all ease-out 200ms; }
+  /* line 37, D:/_projects/cca/src/src/scss/base/buttons */
+  .button:hover:after {
+    height: 100%;
+    top: 0;
+    background-color: #252525;
+    -webkit-transition: all ease-in 300ms;
+            transition: all ease-in 300ms; }
   @media only screen and (min-width: 1025px) {
     .button {
       min-width: 345px;
       font-size: 30px;
       line-height: 65px; } }
 
-/* line 24, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 55, D:/_projects/cca/src/src/scss/base/buttons */
 .button-holder {
   text-align: center; }
 
-/* line 28, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 59, D:/_projects/cca/src/src/scss/base/buttons */
 .go-next, .go-top:before {
   width: 32px;
   height: 23px;
   display: block;
   margin: 0 auto; }
 
-/* line 35, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 66, D:/_projects/cca/src/src/scss/base/buttons */
 .go-next {
   background: url(../images/btn/arrow-down.png) 50% 50% no-repeat;
   margin-bottom: 35px;
   text-indent: -9999em;
   overflow: hidden; }
-  /* line 41, D:/_projects/cca/src/src/scss/base/buttons */
+  /* line 72, D:/_projects/cca/src/src/scss/base/buttons */
   h1 + .go-next {
     margin-top: -25px; }
     @media only screen and (min-width: 641px) {
       h1 + .go-next {
         margin-top: -45px; }
-        /* line 45, D:/_projects/cca/src/src/scss/base/buttons */
+        /* line 76, D:/_projects/cca/src/src/scss/base/buttons */
         h1 + .go-next:before {
           display: none; } }
   @media only screen and (min-width: 641px) {
     .go-next {
       margin-bottom: 45px; }
-      /* line 52, D:/_projects/cca/src/src/scss/base/buttons */
+      /* line 83, D:/_projects/cca/src/src/scss/base/buttons */
       .go-next:before {
         content: '';
         display: block;
@@ -466,7 +497,7 @@ p {
       background-image: url(../images/btn/arrow-down@2x.png);
       width: 54px; } }
 
-/* line 66, D:/_projects/cca/src/src/scss/base/buttons */
+/* line 97, D:/_projects/cca/src/src/scss/base/buttons */
 .go-top {
   display: inline-block;
   margin: 0 auto;
@@ -474,7 +505,7 @@ p {
   font: 400 20px/1 'Source Sans Pro';
   text-decoration: none;
   color: #252525; }
-  /* line 73, D:/_projects/cca/src/src/scss/base/buttons */
+  /* line 104, D:/_projects/cca/src/src/scss/base/buttons */
   .go-top:before {
     content: '';
     background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
