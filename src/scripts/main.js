@@ -32,8 +32,16 @@ var CCA = {} || CCA;
         if($next_box.length) {
           scrollToBox($next_box);
         }
+        else {
+          scrollToPageBottom();
+        }
       }
 
+      function scrollToPageBottom() {
+        $('html, body').animate({
+          scrollTop: $('body').prop('scrollHeight')
+        }, 500);
+      }
 
       function scrollToBox($box) {
         $('html, body').animate({
