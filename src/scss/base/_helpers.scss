@@ -10,6 +10,16 @@
   transform: translateY(-50%);
 }
 
+.clearfix,
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
 .js-disable-hover,
 .js-disable-hover * {
   pointer-events: none !important;

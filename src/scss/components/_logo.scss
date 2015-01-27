@@ -12,7 +12,7 @@ $logo-height: 129px;
   width: $logo-width/2;
   height: $logo-height/2;
   display: inline-block;
-  @include respond-to(desktop) {
+  @include respond-to(tablet-up) {
     background-size: $logo-width $logo-height;
     width: $logo-width;
     height: $logo-height; 

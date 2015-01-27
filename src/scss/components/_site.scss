@@ -1,22 +1,41 @@
 
+.site {
+  @include respond-to(tablet-up) {
+    max-width: $desktop-site-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .site--section-title {
   text-align: center;
   margin-bottom: 35px;
   @include indented-box();
+  @include respond-to(tablet-up) {
+    margin-bottom: 80px;
+  }
 }
 
 .site--section {
   margin-bottom: 20px;
+  @include respond-to(tablet-up) {
+    margin-bottom: 145px;
+  }
   p {
     @include indented-box();
   }
 }
 
 .site--media {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  text-align: center;
   display: none;
 
   &:nth-of-type(1) {
+    display: block;
+  }
+
+  @include respond-to(tablet-up) {
     display: block;
   }
 }
@@ -29,6 +48,10 @@
   padding-top: 25px;
   margin-left: 10px;
   margin-right: 10px;
+  @include respond-to(desktop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
   iframe {
     position: absolute;
     top: 0;

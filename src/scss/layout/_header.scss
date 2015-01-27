@@ -5,7 +5,7 @@ $header-height: 197px;
   position: relative;
   background: #ed7971;
   height: $header-height/2;
-  @include respond-to(desktop) {
+  @include respond-to(tablet-up) {
     height: $header-height;
   }
 }

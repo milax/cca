@@ -1,15 +1,52 @@
 
 .highlights {
   margin-bottom: 10px;
+  @extend %clearfix;
+  @include indented-box();
+  @include respond-to(tablet-up) {
+    padding-top: 67px;
+  }
 }
 
 .highlights--img {
   display: none;
+  @include respond-to(tablet-up) {
+    display: block;
+    margin-bottom: 15px;
+  }
+  @include respond-to(desktop) {
+    margin-bottom: 41px;
+  }
 }
 
 .highlights--item {
   text-align: center;
+
+  @include respond-to(tablet-up) {
+    width: 50%;
+    float: left;
+    &:nth-child(2n+1) {
+      clear: right;
+      padding-right: 15px;
+      .highlights--img {
+        float: left;
+        clear: both;
+      }
+    }
+    &:nth-child(2n) {
+      clear: right;
+      padding-left: 15px;
+      .highlights--img {
+        float: right;
+        clear: both;
+      }
+    }
+  }
+
   .button {
     margin-bottom: 11px;
+    @include respond-to(tablet-up) {
+      margin-bottom: 63px;
+    }
   }
 }

@@ -12,11 +12,13 @@ $go-button-padding: 10px;
   color: #fff;
   text-decoration: none;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+
   @include respond-to(desktop) {
+    min-width: 345px;
     font-size: 30px;
     line-height: 65px;
-    min-width: 345px;
   }
+
 }
 
 .button-holder {
@@ -29,14 +31,32 @@ $go-button-padding: 10px;
   display: block;
   margin: 0 auto;
 }
+
 .go-next {
   background: url(../images/btn/arrow-down.png) 50% 50% no-repeat;
   margin-bottom: 35px;
   @include hide-text();
   @extend %go;
+
   h1 + & {
     margin-top: -25px;
+    @include respond-to(tablet-up) {
+      margin-top: -45px;
+      &:before {
+        display: none;
+      }
+    }
   }
+
+  @include respond-to(tablet-up) {
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 20px;
+    }
+    margin-bottom: 45px;
+  }
+
   @include retina() {
     background-image: url(../images/btn/arrow-down@2x.png);
     width: $go-button-width*2 + $go-button-padding;
@@ -55,6 +75,9 @@ $go-button-padding: 10px;
     background: url(../images/btn/arrow-up.png) 50% 50% no-repeat;
     padding-bottom: 30px;
     @extend %go;
+    @include respond-to(tablet-up) {
+      padding-top: 15px;
+    }
   }
   @include retina() {
     background-image: url(../images/btn/arrow-up@2x.png);
