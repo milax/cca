@@ -16,8 +16,34 @@
     <!-- build:css styles/main.min.css-->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+
+    <script src="scripts/vendor/prismic.io-1.0.28.min.js"></script>
+    <script src="//static.cdn.prismic.io/prismic.js"></script>
+    <script src="scripts/prismic-configuration.js"></script>
+    <script src="scripts/prismic-helpers.js"></script>
+    <script src="scripts/prismic-templates.js"></script>
+    
+
 </head>
 <body>
+
+<!--     <ul>
+      [% articles.forEach(function(article) { %]
+        <li>[%= article.getText('article.title') %]</li>
+      [% } %]
+    </ul> -->
+
+    <ul id="kuku">
+        
+            
+                <div>
+                </div>
+            
+        
+    </ul>
 
 
     <div class="site-wrapper">
@@ -27,7 +53,7 @@
                 Logo
             </a>
         </div>
-
+<!-- 
         <article class="main-article">
             <header class="main-article--header">
                 <h1 class="main-article--title">Internet Week Denmark</h1>
@@ -48,85 +74,94 @@
             </div>
 
         </article>
+ -->
+        <div id="sites">
 
-        <div class="site">
+            <script type="text/template">
 
-            <section class="site--section">
-                <h1 class="site--section-title">IWDK website</h1>
-                <a href="#" class="go-next">Go to the next</a>
-                <div class="site--media">
-                    <img src="images/screens/site01-001.png" alt="" />
-                </div>
-                <div class="site--media">
-                    <img src="images/screens/site01-002.png" alt="" />
-                </div>
-                <div class="site--media">
-                    <img src="images/screens/site01-003.png" alt="" />
-                </div>
-            </section>
+                <% for(var i = 0; i < sites.length; ++i) { %>
+                    <div class="site">
 
-            <section class="site--section">
-                <h1 class="site--section-title">IWDK mobile</h1>
-                <a href="#" class="go-next">Go to the next</a>
-                <div class="site--media">
-                    <img src="images/screens/site01-004.png" alt="" />
-                </div>
-            </section>
+                        <section class="site--section">
+                            <h1 class="site--section-title">IWDK website</h1>
+                            <a href="#" class="go-next">Go to the next</a>
+                            <div class="site--media">
+                                <img src="images/screens/site01-001.png" alt="" />
+                            </div>
+                            <div class="site--media">
+                                <img src="images/screens/site01-002.png" alt="" />
+                            </div>
+                            <div class="site--media">
+                                <img src="images/screens/site01-003.png" alt="" />
+                            </div>
+                        </section>
 
-            <section class="site--section">
-                <h1 class="site--section-title">Case video</h1>
+                        <section class="site--section">
+                            <h1 class="site--section-title">IWDK mobile</h1>
+                            <a href="#" class="go-next">Go to the next</a>
+                            <div class="site--media">
+                                <img src="images/screens/site01-004.png" alt="" />
+                            </div>
+                        </section>
 
-                <a href="#" class="go-next">Go to the next</a>
+                        <section class="site--section">
+                            <h1 class="site--section-title">Case video</h1>
 
-                <div class="site--media site--video">
-                    <iframe width="853" height="480" src="//www.youtube.com/embed/DTjCe0Qg7HY" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
+                            <a href="#" class="go-next">Go to the next</a>
 
-            <section class="site--section">
-                <h1 class="site--section-title">IWDK highlights</h1>
+                            <div class="site--media site--video">
+                                <iframe width="853" height="480" src="//www.youtube.com/embed/DTjCe0Qg7HY" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </section>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <section class="site--section">
+                            <h1 class="site--section-title">IWDK highlights</h1>
 
-                <a href="#" class="go-next">Go to the next</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
 
-                <div class="highlights">
+                            <a href="#" class="go-next">Go to the next</a>
 
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/monday.png" alt="Monday" />
-                        <a href="#" class="button">mandag</a>
+                            <div class="highlights">
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/monday.png" alt="Monday" />
+                                    <a href="#" class="button">mandag</a>
+                                </div>
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/tuesday.png" alt="Tuesday" />
+                                    <a href="#" class="button">tirsdag</a>
+                                </div>
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/wednesday.png" alt="Wednesday" />
+                                    <a href="#" class="button">onsdag</a>
+                                </div>
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/thursday.png" alt="Thursday" />
+                                    <a href="#" class="button">torsdag</a>
+                                </div>
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/friday.png" alt="Friday" />
+                                    <a href="#" class="button">fredag</a>
+                                </div>
+
+                                <div class="highlights--item">
+                                    <img class="highlights--img" src="images/highlights/friday.png" alt="Friday" />
+                                    <a href="#" class="button">tak</a>
+                                </div>
+
+                            </div>
+
+
+                        </section>
+
                     </div>
+                <% } %>
 
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/tuesday.png" alt="Tuesday" />
-                        <a href="#" class="button">tirsdag</a>
-                    </div>
-
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/wednesday.png" alt="Wednesday" />
-                        <a href="#" class="button">onsdag</a>
-                    </div>
-
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/thursday.png" alt="Thursday" />
-                        <a href="#" class="button">torsdag</a>
-                    </div>
-
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/friday.png" alt="Friday" />
-                        <a href="#" class="button">fredag</a>
-                    </div>
-
-                    <div class="highlights--item">
-                        <img class="highlights--img" src="images/highlights/friday.png" alt="Friday" />
-                        <a href="#" class="button">tak</a>
-                    </div>
-
-                </div>
-
-
-            </section>
-
+            </script>
         </div>
 
 
@@ -138,12 +173,39 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+
 
     <!-- build:js scripts/main.min.js-->
     <script src="scripts/main.js"></script>
     <!-- endbuild-->
+
+    <!-- Controller (logic) -->
+
+    <script type="text/javascript">
+        $(function() {
+
+            Helpers.withPrismic(function(ctx) {
+
+                ctx.api.form("everything").ref(ctx.ref).submit(function(err, sites) {
+
+                    if (err) {
+                        Configuration.onPrismicError(err); return;
+                    }
+
+                    // Feed the templates
+                    $('#sites').render(
+                        {
+                            sites: sites.results
+                        }
+                    );
+
+                });
+
+            });
+
+        });
+    </script>
+
 
 </body>
 </html>
