@@ -99,7 +99,20 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/images/',
         src: '**',
         dest: 'images/'
+      },
+      vendorjs: {
+        expand: true,
+        cwd: 'src/scripts/',
+        src: 'vendor/**',
+        dest: 'scripts/'
+      },
+      prismicjs: {
+        expand: true,
+        cwd: 'src/scripts/',
+        src: 'prismic-*.js',
+        dest: 'scripts/'
       }
+
     },
 
     /*
@@ -304,6 +317,8 @@ module.exports = function (grunt) {
     'cssmin',
     'usemin',
     'copy:images',
+    'copy:vendorjs',
+    'copy:prismicjs',
     'replace:imgsrc',
     'replace:cssurl'
   ]);
