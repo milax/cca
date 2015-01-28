@@ -6,7 +6,7 @@ var CCA = {} || CCA;
   
   CCA.Scroll = function() {
 
-    var $go_links = $('.go-next, .go-top');
+    var $go_links = $('.go-top');
 
     var attachEvents = function() {
       $go_links.click(go);
