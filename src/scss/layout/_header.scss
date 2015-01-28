@@ -5,7 +5,11 @@ $header-height: 197px;
   position: relative;
   background: #ed7971;
   height: $header-height/2;
+  margin-bottom: 30px;
+  @include indented-box();
+
   @include respond-to(tablet-up) {
+    margin-bottom: 115px;
     height: $header-height;
   }
 }

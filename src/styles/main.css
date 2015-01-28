@@ -492,10 +492,6 @@ p {
         content: '';
         display: block;
         padding-top: 20px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .go-next {
-      background-image: url(../images/btn/arrow-down@2x.png);
-      width: 54px; } }
 
 /* line 97, D:/_projects/cca/src/src/scss/base/buttons */
 .go-top {
@@ -513,10 +509,6 @@ p {
     @media only screen and (min-width: 641px) {
       .go-top:before {
         padding-top: 15px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .go-top {
-      background-image: url(../images/btn/arrow-up@2x.png);
-      width: 54px; } }
 
 /* line 2, D:/_projects/cca/src/src/scss/layout/grid */
 * {
@@ -543,9 +535,17 @@ img, iframe {
 .site-header {
   position: relative;
   background: #ed7971;
-  height: 98.5px; }
+  height: 98.5px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media only screen and (min-width: 1025px) {
+    .site-header {
+      padding-left: 0;
+      padding-right: 0; } }
   @media only screen and (min-width: 641px) {
     .site-header {
+      margin-bottom: 115px;
       height: 197px; } }
 
 /* line 2, D:/_projects/cca/src/src/scss/layout/footer */
@@ -584,7 +584,6 @@ img, iframe {
 
 /* line 2, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article {
-  padding-top: 50px;
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px; }
@@ -597,16 +596,15 @@ img, iframe {
       max-width: 1025px;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 115px;
       padding-bottom: 60px; } }
-  /* line 15, D:/_projects/cca/src/src/scss/components/main-article */
+  /* line 13, D:/_projects/cca/src/src/scss/components/main-article */
   .main-article .button-holder {
     padding: 30px 0 55px; }
     @media only screen and (min-width: 641px) {
       .main-article .button-holder {
         padding: 85px 0 150px; } }
 
-/* line 24, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 22, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--header {
   text-align: center;
   font-family: 'Source Sans Pro';
@@ -615,17 +613,16 @@ img, iframe {
     .main-article--header {
       padding-bottom: 65px; } }
 
-/* line 34, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 32, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--title {
   font-size: 42px;
-  font-weight: 700;
   margin-bottom: 5px; }
   @media only screen and (min-width: 641px) {
     .main-article--title {
       margin-bottom: 10px;
       font-size: 85px; } }
 
-/* line 44, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 41, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--sub-title {
   font-size: 25px;
   font-weight: 300; }
@@ -633,7 +630,7 @@ img, iframe {
     .main-article--sub-title {
       font-size: 50px; } }
 
-/* line 52, D:/_projects/cca/src/src/scss/components/main-article */
+/* line 49, D:/_projects/cca/src/src/scss/components/main-article */
 .main-article--img-holder {
   margin-bottom: 20px; }
   @media only screen and (min-width: 641px) {
@@ -678,16 +675,18 @@ img, iframe {
 /* line 29, D:/_projects/cca/src/src/scss/components/site */
 .site--media {
   margin-bottom: 50px;
-  text-align: center;
-  display: none; }
-  /* line 34, D:/_projects/cca/src/src/scss/components/site */
-  .site--media:nth-of-type(1) {
-    display: block; }
-  @media only screen and (min-width: 641px) {
-    .site--media {
-      display: block; } }
+  text-align: center; }
+  /* line 33, D:/_projects/cca/src/src/scss/components/site */
+  .site--top-section .site--media {
+    display: none; }
+    /* line 36, D:/_projects/cca/src/src/scss/components/site */
+    .site--top-section .site--media:nth-of-type(1) {
+      display: block; }
+    @media only screen and (min-width: 641px) {
+      .site--top-section .site--media {
+        display: block; } }
 
-/* line 43, D:/_projects/cca/src/src/scss/components/site */
+/* line 48, D:/_projects/cca/src/src/scss/components/site */
 .site--video {
   padding-left: 10px;
   padding-right: 10px;
@@ -705,7 +704,7 @@ img, iframe {
     .site--video {
       margin-left: 0;
       margin-right: 0; } }
-  /* line 55, D:/_projects/cca/src/src/scss/components/site */
+  /* line 60, D:/_projects/cca/src/src/scss/components/site */
   .site--video iframe {
     position: absolute;
     top: 0;

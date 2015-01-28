@@ -29,16 +29,21 @@
 .site--media {
   margin-bottom: 50px;
   text-align: center;
-  display: none;
 
-  &:nth-of-type(1) {
-    display: block;
-  }
+  .site--top-section & {
+    display: none;
+    
+    &:nth-of-type(1) {
+      display: block;
+    }
 
-  @include respond-to(tablet-up) {
-    display: block;
+    @include respond-to(tablet-up) {
+      display: block;
+    }
   }
 }
+
+
 
 .site--video {
   @include indented-box();

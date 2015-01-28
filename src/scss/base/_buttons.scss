@@ -88,10 +88,10 @@ $go-button-padding: 10px;
     margin-bottom: 45px;
   }
 
-  @include retina() {
-    background-image: url(../images/btn/arrow-down@2x.png);
-    width: $go-button-width*2 + $go-button-padding;
-  }
+  // @include retina() {
+  //   background-image: url(../images/btn/arrow-down@2x.png);
+  //   width: $go-button-width*2 + $go-button-padding;
+  // }
 }
 
 .go-top {
@@ -110,8 +110,8 @@ $go-button-padding: 10px;
       padding-top: 15px;
     }
   }
-  @include retina() {
-    background-image: url(../images/btn/arrow-up@2x.png);
-    width: $go-button-width*2 + $go-button-padding;
-  }
+  // @include retina() {
+  //   background-image: url(../images/btn/arrow-up@2x.png);
+  //   width: $go-button-width*2 + $go-button-padding;
+  // }
 }
