@@ -3,7 +3,7 @@
   text-align: center;
   padding-bottom: 85px;
   @include respond-to(tablet-up) {
-    margin-top: -50px;
+    padding-top: 108px;
     padding-bottom: 220px;
   }
 }

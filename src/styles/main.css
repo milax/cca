@@ -545,7 +545,6 @@ img, iframe {
       padding-right: 0; } }
   @media only screen and (min-width: 641px) {
     .site-header {
-      margin-bottom: 115px;
       height: 197px; } }
 
 /* line 2, D:/_projects/cca/src/src/scss/layout/footer */
@@ -554,7 +553,7 @@ img, iframe {
   padding-bottom: 85px; }
   @media only screen and (min-width: 641px) {
     .site-footer {
-      margin-top: -50px;
+      padding-top: 108px;
       padding-bottom: 220px; } }
 
 /* line 5, D:/_projects/cca/src/src/scss/components/logo */
@@ -647,6 +646,7 @@ img, iframe {
 .site--section-title {
   text-align: center;
   margin-bottom: 35px;
+  padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px; }
   @media only screen and (min-width: 1025px) {
@@ -655,38 +655,33 @@ img, iframe {
       padding-right: 0; } }
   @media only screen and (min-width: 641px) {
     .site--section-title {
-      margin-bottom: 80px; } }
+      margin-bottom: 80px;
+      padding-top: 108px; } }
 
-/* line 19, D:/_projects/cca/src/src/scss/components/site */
-.site--section {
-  margin-bottom: 20px; }
-  @media only screen and (min-width: 641px) {
-    .site--section {
-      margin-bottom: 145px; } }
-  /* line 24, D:/_projects/cca/src/src/scss/components/site */
-  .site--section p {
-    padding-left: 10px;
-    padding-right: 10px; }
-    @media only screen and (min-width: 1025px) {
-      .site--section p {
-        padding-left: 0;
-        padding-right: 0; } }
+/* line 22, D:/_projects/cca/src/src/scss/components/site */
+.site--section p {
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media only screen and (min-width: 1025px) {
+    .site--section p {
+      padding-left: 0;
+      padding-right: 0; } }
 
-/* line 29, D:/_projects/cca/src/src/scss/components/site */
+/* line 27, D:/_projects/cca/src/src/scss/components/site */
 .site--media {
   margin-bottom: 50px;
   text-align: center; }
-  /* line 33, D:/_projects/cca/src/src/scss/components/site */
+  /* line 31, D:/_projects/cca/src/src/scss/components/site */
   .site--top-section .site--media {
     display: none; }
-    /* line 36, D:/_projects/cca/src/src/scss/components/site */
+    /* line 34, D:/_projects/cca/src/src/scss/components/site */
     .site--top-section .site--media:nth-of-type(1) {
       display: block; }
     @media only screen and (min-width: 641px) {
       .site--top-section .site--media {
         display: block; } }
 
-/* line 48, D:/_projects/cca/src/src/scss/components/site */
+/* line 45, D:/_projects/cca/src/src/scss/components/site */
 .site--video {
   padding-left: 10px;
   padding-right: 10px;
@@ -704,7 +699,7 @@ img, iframe {
     .site--video {
       margin-left: 0;
       margin-right: 0; } }
-  /* line 60, D:/_projects/cca/src/src/scss/components/site */
+  /* line 57, D:/_projects/cca/src/src/scss/components/site */
   .site--video iframe {
     position: absolute;
     top: 0;

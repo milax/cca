@@ -9,7 +9,7 @@ $header-height: 197px;
   @include indented-box();
 
   @include respond-to(tablet-up) {
-    margin-bottom: 115px;
+    // margin-bottom: 115px;
     height: $header-height;
   }
 }
